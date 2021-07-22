@@ -1,0 +1,91 @@
+<style>
+.text{
+    text-align: center;
+    font-family: "Georgia";
+}
+.button{
+    width: 150px;
+    height: 50px;
+    position:relative;
+    top:350px;
+    left:200px;
+    
+}
+.die1{
+    position:relative;
+    width: 200px;
+    height: 200px;
+    left:-205px;
+    flex: 33.33%;
+    padding: 5px;
+    top: 150px;
+}
+.die2{
+    position:relative;
+    width: 200px;
+    height: 200px;
+    left:50px;
+    flex: 33.33%;
+    padding: 5px;
+    top: 150px;
+}
+</style>
+
+
+<script type="text/javascript" src="script.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice App</title>
+</head>
+<u><h1 class="text">Dice Web App</h1></u>
+<div style="text-align:center;">
+    <button onclick="func1()" id="rollButton" class="button">Roll</button>
+    <img id="def1"class="die1" src="Die/def1.png">
+    <img id="def2" class="die2" src="Die/def2.png">
+    <script>
+       
+        function func1(){
+            var image1 = document.getElementById("def1");
+            var image2 = document.getElementById("def2");
+            var num1 = Math.floor(Math.random()*6)+1;
+            var num2 = Math.floor(Math.random()*6)+1;
+            if (num1 == 1){
+                image1.src = "Die/dice1.png"
+            } else if (num1 == 2){
+                image1.src = "Die/dice2.png"
+            } else if (num1 == 3){
+                image1.src = "Die/dice3.png"
+            } else if (num1 == 4){
+                image1.src = "Die/dice4.png"
+            } else if (num1 == 5){
+                image1.src = "Die/dice5.png"
+            } else if (num1 == 6){
+                image1.src = "Die/dice6.png"
+            }
+            if (num2 == 1){
+                image2.src = "Die/dice1.png"
+            } else if (num2 == 2){
+                image2.src = "Die/dice2.png"
+            } else if (num2 == 3){
+                image2.src = "Die/dice3.png"
+            } else if (num2 == 4){
+                image2.src = "Die/dice4.png"
+            } else if (num2 == 5){
+                image2.src = "Die/dice5.png"
+            } else if (num2 == 6){
+                image2.src = "Die/dice6.png"
+            }
+            
+        }
+    </script>
+</div>
+<body bgcolor="green">
+   
+</body>
+</html>
